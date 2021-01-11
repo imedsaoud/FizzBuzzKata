@@ -38,5 +38,8 @@
   "bugs": {
     "url": "https://github.com/mathieueveillard/js-kata-starter-pbt/issues"
   },
-  "homepage": "https://github.com/mathieueveillard/js-kata-starter-pbt#readme"
+  "homepage": "https://github.com/mathieueveillard/js-kata-starter-pbt#readme",
+  "dependencies": {
+    "ramda": "^0.27.1"
+  }
 }

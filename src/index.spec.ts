@@ -1,20 +1,33 @@
-import { fizzBuzz } from ".";
+import { fizzbuzz } from ".";
 
-
-describe("Else return n", () =>{
-  it("Should return 1 for n = 1", ()=> {});
-  it("Should return 2 for n = 2", ()=> {
-    expect(fizzBuzz(2)).toEqual(2);
-    
+describe("If n is a multiple of 3, return 'Fizz'", () => {
+  it("should return 'Fizz' for n = 3", () => {
+    expect(fizzbuzz(3)).toEqual("Fizz");
   });
 });
 
-describe("Else return Fizz",()=>{
-  it("Should return 'Fizz' for n multiple of 3",() => {
-    expect(fizzBuzz(6)).toEqual("Fizz");
-  })
-  it("Should return 'Fizz' for n = 3",() => {
-    expect(fizzBuzz(3)).toEqual("Fizz");
-  })
+describe("If n is a multiple of 5, return 'Buzz'", () => {
+  it("should return 'Buzz' for n = 5", () => {
+    expect(fizzbuzz(5)).toEqual("Buzz");
+  });
 
-})
+  it("should return 'Buzz' for n = 10", () => {
+    expect(fizzbuzz(10)).toEqual("Buzz");
+  });
+});
+
+describe("If n is a multiple of 3 and 5, return 'FizzBuzz'", () => {
+  it("should return 'FizzBuzz' for n = 3 * 5", () => {
+    expect(fizzbuzz(3 * 5)).toEqual("FizzBuzz");
+  });
+
+  it("should return 'FizzBuzz' for n = 3 * 5 * 2", () => {
+    expect(fizzbuzz(3 * 5 * 2)).toEqual("FizzBuzz");
+  });
+});
+
+describe("Else return n", () => {
+  it("should return 7 for n = 7", () => {
+    expect(fizzbuzz(7)).toEqual("7");
+  });
+});
